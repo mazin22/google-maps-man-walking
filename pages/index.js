@@ -71,7 +71,7 @@ function Animation({map, route}) {
     trackRef.current = createTrackFromCurve(curve);
     scene.add(trackRef.current);
 
-    // CAR MODEL
+    // MODEL
     loadModel().then((model) => {
       if (carRef.current) {
         scene.remove(carRef.current);
@@ -85,7 +85,7 @@ function Animation({map, route}) {
         overlayRef.current.getViewportSize()
       );
       
-// ANIMATION OF CAR
+// ANIMATION 
       if (carRef.current) {
         const progress = (performance.now() % ANIMATION_MS) / ANIMATION_MS;
         
